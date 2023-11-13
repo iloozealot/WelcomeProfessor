@@ -13,12 +13,33 @@ Console.WriteLine();
 
 Console.Write("What is your first name? ");
 firstName = Console.ReadLine();
+firstName = firstName?.ToLower();
 
-if (firstName == "Tim" || firstName == "TIM" || firstName == "tim")
+switch (firstName)
 {
-    Console.WriteLine("Welcome, Professor.");
+    case "tim":
+    case "timothy":
+        Console.WriteLine("Welcome, Professor.");
+        //(firstName == "Tim" || firstName == "TIM" || firstName == "tim")
+
+        //    {
+        //        Console.WriteLine("Welcome, Professor.");
+        //    }
+        //    default
+        //    {
+        //        Console.WriteLine("Welcome, student.");
+        //    }
+        break;
+    default:
+        Console.WriteLine("Welcome, student.");
+        break;
 }
-else
-{
-    Console.WriteLine("Welcome, student.");
-}
+
+//if (firstName == "Tim" || firstName == "TIM" || firstName == "tim")
+//{
+//    Console.WriteLine("Welcome, Professor.");
+//}
+//else
+//{
+//    Console.WriteLine("Welcome, student.");
+//}
